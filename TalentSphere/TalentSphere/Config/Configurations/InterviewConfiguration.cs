@@ -17,6 +17,8 @@ namespace TalentSphere.Config.Configurations
 
             builder.Property(i => i.Status).HasDefaultValue(InterviewStatus.Scheduled).IsRequired();
 
+            builder.property(i => i.IsDeleted).HasDefaultValue(false).IsRequired();
+
             builder.Property(i => i.CreatedAt).HasDefaultValueSql("GETUTCDATE()");
             builder.Property(i => i.UpdatedAt).HasDefaultValueSql("GETUTCDATE()");
 
