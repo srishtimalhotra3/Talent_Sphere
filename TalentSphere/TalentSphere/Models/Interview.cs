@@ -11,9 +11,9 @@ namespace TalentSphere.Models
 
         public int ApplicationID { get; set; }
 
-        public DateTime Date { get; set; }
+        public DateOnly Date { get; set; }
 
-        public string Time { get; set; }
+        public TimeOnly Time { get; set; }
 
         public int InterviewerID { get; set; }
 
@@ -23,9 +23,10 @@ namespace TalentSphere.Models
 
         public User Interviewer { get; set; }
 
-        public DateTime CreatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime CreatedAt { get; set; } 
 
-        public DateTime? UpdatedAt { get; set; } = DateTime.UtcNow;
+        public DateTime? UpdatedAt { get; set; } 
+        public bool IsDeleted { get; set; }
     }
 }
  
