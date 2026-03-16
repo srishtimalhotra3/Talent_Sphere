@@ -26,6 +26,11 @@
     <Folder Include="Middleware\" />
     <Folder Include="Interface\" />
     <Folder Include="Profiles\" />
+    <Folder Include="Controllers\" />
+    <Folder Include="Middleware\" />
+    <Folder Include="Interface\" />
+    <Folder Include="Services\" />
+    <Folder Include="Repositories\" />
   </ItemGroup>
 
 </Project>
