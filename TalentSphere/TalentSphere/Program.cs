@@ -1,8 +1,10 @@
 using Microsoft.EntityFrameworkCore;
 using TalentSphere.Config;
 using TalentSphere.Repositories;
-using TalentSphere.Interfaces;
+using TalentSphere.Services.Interfaces;
+using TalentSphere.Repositories.Interfaces;
 using TalentSphere.Services;
+using TalentSphere.Repositories;
 using AutoMapper;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -24,6 +26,10 @@ builder.Services.AddScoped<IInterviewRepository, InterviewRepository>();
 builder.Services.AddScoped<IInterviewService, InterviewService>();
 builder.Services.AddScoped<ISelectionRepository, SelectionRepository>();
 builder.Services.AddScoped<ISelectionService, SelectionService>();
+builder.Services.AddScoped<IComplianceRecordRepository, ComplianceRecordRepository>();
+builder.Services.AddScoped<IComplianceRecordService, ComplianceRecordService>();
+builder.Services.AddScoped<IAuditRepository, AuditRepository>();
+builder.Services.AddScoped<IAuditService, AuditService>();
 
 // AutoMapper registration - scan assembly for profiles in the Mappers folder
 builder.Services.AddAutoMapper(typeof(Program));
